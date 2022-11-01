@@ -48,8 +48,8 @@ const item2 = {
     opacity: 0,
     y: -200,
     transition: {
-      ease: "easeInOut",
-      duration: 1,
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 2,
     },
   },
 };
@@ -71,10 +71,10 @@ const Loader = ({
         initial="hidden"
         animate="show"
         exit="exit"
-        onAnimationComplete={() => setLoading(true)}
+        onAnimationComplete={() => setLoading(false)}
         key="loader"
       >
-        <motion.div className="" variants={item}>
+        <motion.div className="" variants={item} key="1">
           <h1>Design</h1>
         </motion.div>
         <motion.div className="" variants={item}>

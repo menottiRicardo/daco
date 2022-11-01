@@ -3,10 +3,30 @@ import Image from "next/image";
 import Navbar from "../components/Navbar";
 import styles from "../styles/Home.module.css";
 import { motion as m } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Loader from "../components/Loader";
 export default function Home() {
   const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (window !== undefined && document !== undefined && document !== null) {
+      const trailer = document.getElementById("trailer");
+      if (trailer !== null) {
+        window.onmousemove = (e) => {
+          const x = e.clientX - trailer?.offsetWidth / 2;
+          const y = e.clientY - trailer?.offsetHeight / 2;
+          const keyframes = {
+            transform: `translate(${x}px, ${y}px)`,
+          };
+
+          trailer.animate(keyframes, {
+            duration: 1000,
+            fill: "forwards",
+          });
+        };
+      }
+    }
+  }, []);
   return (
     <m.div
       className="bg-orange-100"
@@ -20,29 +40,18 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {loading ? (
-        <m.div key="loader">
-          <Loader loading={loading} setLoading={setLoading} />
-        </m.div>
+        <Loader loading={loading} setLoading={setLoading} />
       ) : (
-        <main>
+        <main className="min-h-screen group">
           <Navbar />
+          <div
+            className="h-8 w-8 bg-white rounded-full fixed left:0 z-[1000] pointer-events-none opacity-0 group-hover:opacity-100"
+            id="trailer"
+          ></div>
           <div className="my-96 p-1">
             <h1 className="text-6xl text-center lg:text-right lg:text-9xl">
-              Happy Pickle
+              Designs that bring life
             </h1>
-          </div>
-
-          <div className="flex justify-between">
-            <div>
-              <h2>Design</h2>
-              <h2>Company</h2>
-              <h2>2022</h2>
-            </div>
-            <div>
-              <h3>This pickle gonna make you smile.</h3>
-              <h3>Scottish designs to make you happy</h3>
-              <h3>click contact for cool</h3>
-            </div>
           </div>
         </main>
       )}
