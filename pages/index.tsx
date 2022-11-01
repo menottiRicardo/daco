@@ -5,6 +5,12 @@ import styles from "../styles/Home.module.css";
 import { motion as m } from "framer-motion";
 import { useEffect, useState } from "react";
 import Loader from "../components/Loader";
+import {
+  ArrowDownLeftIcon,
+  ArrowDownRightIcon,
+  ArrowUpLeftIcon,
+  ArrowUpRightIcon,
+} from "@heroicons/react/24/solid";
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
@@ -49,11 +55,31 @@ export default function Home() {
             className="h-8 w-8 bg-white rounded-full fixed left:0 z-[1000] pointer-events-none opacity-0 group-hover:opacity-100"
             id="trailer"
           ></div>
-          <div className="my-96 p-1">
+
+          <div className="my-20 justify-center hidden md:flex absolute left-40">
+            <ArrowDownLeftIcon className="w-10" />
+            <ArrowDownRightIcon className="w-10" />
+            <ArrowUpLeftIcon className="w-10" />
+            <ArrowUpRightIcon className="w-10" />
+          </div>
+
+          <div className="mt-32 md:my-60 p-1">
             <h1 className="text-6xl text-center lg:text-right lg:text-9xl">
               Designs that bring life
             </h1>
           </div>
+          <div className="flex my-20 justify-center md:hidden">
+            <ArrowDownLeftIcon className="w-5" />
+            <ArrowDownRightIcon className="w-5" />
+            <ArrowUpLeftIcon className="w-5" />
+            <ArrowUpRightIcon className="w-5" />
+          </div>
+          <p className="text-center md:w-1/3 md:text-left md:pl-10">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+            possimus totam quas! Repellendus incidunt commodi atque odio non.
+            Temporibus quis debitis dolores recusandae doloremque reprehenderit
+            voluptates velit tempora quos nobis.
+          </p>
         </main>
       )}
     </m.div>
