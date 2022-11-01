@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "LatoBold";
+  src: url("../public/Lato-Bold.ttf");
+}
+@layer utilities {
+  .animated-underline {
+    background-image: linear-gradient(#33333300, #33333300),
+      linear-gradient(to right, #744f2e, #f87700);
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease;
+  }
+  .animated-underline-left {
+    background-image: linear-gradient(#33333300, #33333300),
+      linear-gradient(to right, #f87700, #744f2e);
+    background-size: 100% 2px, 0 2px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s ease;
+  }
+  .animated-underline:hover,
+  .animated-underline:focus {
+    background-size: 0 2px, 100% 2px;
+  }
+  .animated-underline-left:hover,
+  .animated-underline-left:focus {
+    background-size: 0 2px, 100% 2px;
+  }
+  /* .scrollbar::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  .scrollbar-h::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #f7f7f7;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #fe7a00;
+    border-radius: 100vh;
+    border: 3px solid #f6f7ed;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #f95340;
+  } */
+}
