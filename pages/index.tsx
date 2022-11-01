@@ -49,10 +49,10 @@ export default function Home() {
       {loading ? (
         <Loader loading={loading} setLoading={setLoading} />
       ) : (
-        <main className="min-h-screen group">
+        <main className="min-h-screen group/cursor">
           <Navbar />
           <div
-            className="h-8 w-8 bg-white rounded-full fixed left:0 z-[1000] pointer-events-none opacity-0 group-hover:opacity-100"
+            className="h-8 w-8 bg-white rounded-full fixed left:0 z-[1000] pointer-events-none opacity-0 group-hover/cursor:opacity-100"
             id="trailer"
           ></div>
 
@@ -63,10 +63,13 @@ export default function Home() {
             <ArrowUpRightIcon className="w-10" />
           </div>
 
-          <div className="mt-32 md:my-60 p-1">
-            <h1 className="text-6xl text-center lg:text-right lg:text-9xl">
-              Designs that bring life
-            </h1>
+          <div className="md:flex md:justify-end md:pr-2">
+            <div className="mt-32 md:my-60 p-1 relative cursor-crosshair group/bg">
+             
+              <h1 className="text-6xl text-center lg:text-right lg:text-9xl group-hover/bg:text-gray-500 z-[100]">
+                Designs that bring life
+              </h1>
+            </div>
           </div>
           <div className="flex my-20 justify-center md:hidden">
             <ArrowDownLeftIcon className="w-5" />
