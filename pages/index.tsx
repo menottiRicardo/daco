@@ -9,10 +9,11 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (window !== undefined && document !== undefined && document !== null) {
+    if (window !== undefined) {
       const trailer = document.getElementById("trailer");
       if (trailer !== null) {
         window.onmousemove = (e) => {
+          console.log("hre");
           const x = e.clientX - trailer?.offsetWidth / 2;
           const y = e.clientY - trailer?.offsetHeight / 2;
           const keyframes = {
@@ -26,7 +27,7 @@ export default function Home() {
         };
       }
     }
-  }, []);
+  }, [loading]);
   return (
     <m.div
       className="bg-orange-100"

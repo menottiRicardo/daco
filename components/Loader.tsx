@@ -63,10 +63,10 @@ const Loader = ({
   return (
     <div
       key="loaders"
-      className="bg-red-100 w-screen h-screen scrollbar-hide z-[10] flex justify-center p-2 relative md:p-0"
+      className="bg-orange-50 w-screen h-screen scrollbar-hide z-[10] flex justify-center p-2 relative md:p-0"
     >
       <motion.div
-        className="bg-red-50 w-full h-full scrollbar-hide flex flex-col justify-center items-center gap-y-28 md:flex-row md:px-10 md:gap-x-44"
+        className="bg-orange-50 w-full h-full scrollbar-hide flex flex-col justify-center items-center gap-y-28 md:flex-row md:px-10 md:gap-x-44"
         variants={container}
         initial="hidden"
         animate="show"
