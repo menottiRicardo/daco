@@ -5,12 +5,20 @@ import {
   ArrowLongLeftIcon,
 } from "@heroicons/react/24/solid";
 import { motion } from "framer-motion";
-const Navbar = () => {
+const Navbar = ({
+  next,
+  back,
+  current,
+}: {
+  next: string;
+  back: string;
+  current: string;
+}) => {
   return (
     <nav className="pt-1">
       <ul className="flex justify-between mx-2">
         <Link
-          href={"/"}
+          href={`/${back}`}
           className="flex items-center gap-x-1 cursor-pointer animated-underline-left font-latoBold"
         >
           <motion.li
@@ -22,11 +30,11 @@ const Navbar = () => {
               duration: 0.5,
             }}
           >
-            Design
+            {current}
           </motion.li>
         </Link>
         <Link
-          href={"/automation"}
+          href={`/${next.toLocaleLowerCase()}`}
           className="flex items-center gap-x-1 cursor-pointer animated-underline"
         >
           <motion.li
@@ -38,7 +46,7 @@ const Navbar = () => {
               duration: 0.5,
             }}
           >
-            Automation
+            {next}
           </motion.li>
           <ArrowLongRightIcon className="w-5" />
         </Link>

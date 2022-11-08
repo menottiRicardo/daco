@@ -19,7 +19,6 @@ export default function Home() {
       const trailer = document.getElementById("trailer");
       if (trailer !== null) {
         window.onmousemove = (e) => {
-          
           const x = e.clientX - trailer?.offsetWidth / 2;
           const y = e.clientY - trailer?.offsetHeight / 2;
           const keyframes = {
@@ -50,7 +49,7 @@ export default function Home() {
         <Loader loading={loading} setLoading={setLoading} />
       ) : (
         <main className="min-h-screen group/cursor">
-          <Navbar />
+          <Navbar next={"Automation"} back={"development"} current='Design'/>
           <div
             className="h-8 w-8 bg-white rounded-full fixed left:0 z-[1000] pointer-events-none opacity-0 group-hover/cursor:opacity-100"
             id="trailer"
@@ -65,7 +64,6 @@ export default function Home() {
 
           <div className="md:flex md:justify-end md:pr-2">
             <div className="mt-32 md:my-60 p-1 relative cursor-crosshair group/bg">
-             
               <h1 className="text-6xl text-center lg:text-right lg:text-9xl group-hover/bg:text-gray-500 z-[100]">
                 Designs that bring life
               </h1>
