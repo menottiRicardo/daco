@@ -7,7 +7,7 @@ const Card = () => {
       const trailer = document.getElementById("cards");
       if (trailer !== null) {
         // @ts-ignore
-        document.getElementById("cards").onmousemove = (e) => {
+        trailer.onmousemove = (e) => {
           // @ts-ignore
           for (const card of document.getElementsByClassName(
             "card_card__xkQ7q"
@@ -67,6 +67,29 @@ const Card = () => {
                   <h4 className="text-base text-gray-300 sm:text-white">
                     Stop having everything in house and join the thousands of
                     companies that are taking advantage from cloud services
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.card}>
+          <div className={styles.cardContent}>
+            <div className="flex justify-between items-center xl:justify-around">
+              <h3 className="text-white font-bold text-xl xl:text-2xl">
+                Automation
+              </h3>
+              <ForwardIcon className="text-white w-10 sm:w-20" />
+            </div>
+            <div className={styles.cardInfoWrapper}>
+              <div className={styles.cardInfo}>
+                <ForwardIcon className="text-white w-12 hidden xl:inline" />
+                <div>
+                  <h4 className="text-base text-gray-300 sm:text-white">
+                    Doing it manually? save time and offload repetitive work. We
+                    do anything from automated sales calls to syncing all
+                    relevant customer data into a CRM.
                   </h4>
                 </div>
               </div>

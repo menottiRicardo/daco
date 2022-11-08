@@ -31,7 +31,10 @@
   .animated-underline-left:focus {
     background-size: 0 2px, 100% 2px;
   }
-  
+  :root {
+    --bg-color: rgb(20, 20, 20);
+    --card-color: rgb(23, 23, 23);
+  }
 
   /* .scrollbar::-webkit-scrollbar {
     width: 10px;
@@ -57,4 +60,3 @@
     background: #f95340;
   } */
 }
-
