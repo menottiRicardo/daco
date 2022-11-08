@@ -1,4 +1,8 @@
-import { CloudIcon, ForwardIcon } from "@heroicons/react/24/solid";
+import {
+  CloudIcon,
+  CodeBracketSquareIcon,
+  ForwardIcon,
+} from "@heroicons/react/24/solid";
 import React, { useEffect } from "react";
 import styles from "./card.module.css";
 const Card = () => {
@@ -78,35 +82,13 @@ const Card = () => {
           <div className={styles.cardContent}>
             <div className="flex justify-between items-center xl:justify-around">
               <h3 className="text-white font-bold text-xl xl:text-2xl">
-                Automation
+                Software
               </h3>
-              <ForwardIcon className="text-white w-10 sm:w-20" />
+              <CodeBracketSquareIcon className="text-white w-10 sm:w-20" />
             </div>
             <div className={styles.cardInfoWrapper}>
               <div className={styles.cardInfo}>
-                <ForwardIcon className="text-white w-12 hidden xl:inline" />
-                <div>
-                  <h4 className="text-base text-gray-300 sm:text-white">
-                    Doing it manually? save time and offload repetitive work. We
-                    do anything from automated sales calls to syncing all
-                    relevant customer data into a CRM.
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.cardContent}>
-            <div className="flex justify-between items-center xl:justify-around">
-              <h3 className="text-white font-bold text-xl xl:text-2xl">
-                Automation
-              </h3>
-              <ForwardIcon className="text-white w-10 sm:w-20" />
-            </div>
-            <div className={styles.cardInfoWrapper}>
-              <div className={styles.cardInfo}>
-                <ForwardIcon className="text-white w-12 hidden xl:inline" />
+                <CodeBracketSquareIcon className="text-white w-12 hidden xl:inline" />
                 <div>
                   <h4 className="text-base text-gray-300 sm:text-white">
                     Doing it manually? save time and offload repetitive work. We

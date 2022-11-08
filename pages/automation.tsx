@@ -11,6 +11,21 @@ const automation = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="px-2">
+        <div className="flex justify-center">
+          <div className="p-1 relative cursor-crosshair group/bg">
+            <h1 className="text-6xl text-center lg:text-right lg:text-9xl group-hover/bg:text-gray-200 z-[100] text-white font-latoBold mt-8 xl:mt-20">
+              Solutions
+            </h1>
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <p className="text-gray-400 xl:w-[50%] xl:my-5">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga aut
+            laborum veniam? Cumque nihil, nemo non dignissimos perspiciatis
+            accusantium necessitatibus, excepturi fugiat dicta aspernatur, illum
+            neque consequuntur qui! Architecto, fugit!
+          </p>
+        </div>
         <div className="pt-4">
           <Cards />
         </div>
